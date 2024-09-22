@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styel.css">
-    <!-- <script src="https://kit.fontawesome.com/3af4c62178.js" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,24 +12,15 @@
         <div class="container">
             <nav class="icon">
                 <h1>Harshit</h1>
-                <ul>
-                    <!-- <ul id="nav-links"> -->
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <i  id="close-menu" class="fa-solid fa-xmark"></i>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i  id="close-menu" class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i id="open-menu" class="fa-solid fa-bars" ></i>
-                <ul id="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-
+                <i id="open-menu" class="fa-solid fa-bars" onclick="openmenu()" ></i>
             </nav>
             
             <div class="header-text">
@@ -45,7 +35,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="image/Snapchat-51735762.jpg" alt="" height="500px" width="250px">
+                    <img src="image/about.jpg" alt="" height="400px" width="250px">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -84,7 +74,7 @@
         </div>
     </div>
  <!-- -------------------services------------------------------ -->
-<div class="services">
+<div id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
             <div class="services-list">
@@ -106,8 +96,27 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta optio voluptatem consequuntur labore architecto iure. Maiores, perferendis,</p>
                 <a href="#">Learn more</a>
                 </div>
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2>Photoshop</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta optio voluptatem consequuntur labore architecto iure. Maiores, perferendis, </p>
+                <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2> Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta optio voluptatem consequuntur labore architecto iure. Maiores, perferendis,.</p>
+                <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-video"></i>
+                    <h2>Video Editing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta optio voluptatem consequuntur labore architecto iure. Maiores, perferendis,</p>
+                <a href="#">Learn more</a>
+                </div>
+
+
             </div>
-    
     </div>
 </div>
 <!-- -----------------portfolio------------------ -->
@@ -139,6 +148,32 @@
                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
+            <div class="work">
+                <img src="image/pexels-kevin-ku-92347-577585.jpg" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error in doloremque facilis porro, harum distinctio.</p>
+                <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/lp3.jpg" alt="">
+                <div class="layer">
+                    <h3>Online shoping App</h3>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique architecto quaerat ea iusto recusandae dolore!</p>
+                  <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/pexels-kevin-ku-92347-577585.jpg" alt="">
+                <div class="layer">
+                    <h3>Music App</h3>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquid quas provident praesentium facilis minima?</p>
+                   <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+
         </div>
         <a href="#" class="btn">See more</a>
     </div>
@@ -146,7 +181,7 @@
 
 <!-- -----------------------------contact---------------------- -->
 
-<div class="contact">
+<div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -166,12 +201,13 @@
                 <a href="image/HarshitPandeyResume.pdf" download class="btn btn2">Dowunlode RESUME</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form> 
+                <span id="msg"></span>
             </div>
 
         </div>
@@ -180,14 +216,6 @@
         <p>Copyright@Harshit,Made with<i class="fa-solid fa-heart" style="color: #ff004f;"></i> by resume Purpase</p>
     </div>
 </div>
-
-
-
-
-
-
-
-
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -203,24 +231,38 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
-           // Select elements
-const openMenu = document.getElementById('open-menu');
-const closeMenu = document.getElementById('close-menu');
-const navLinks = document.getElementById('nav-links');
-
-// Function to open the menu
-openMenu.addEventListener('click', () => {
-    navLinks.style.right = "0"; // Show menu
-    navLinks.style.transition = "right 0.3s ease";
-});
-
-// Function to close the menu
-closeMenu.addEventListener('click', () => {
-    navLinks.style.right = "-250px"; // Hide menu
-});
-
     </script>
     
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right =("0");
+
+    }
+    function closemenu(){
+        sidemenu.style.right =("-200px");
+        
+    }
+</script>
+
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbx3W9A_1zKZupN_lpjW1WYBJo3VSlBiBBeha67kFnKsP0p2JkqYQlRasV93EoCummgz/exec>'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            } ,5000 )
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </body>
 </html>
