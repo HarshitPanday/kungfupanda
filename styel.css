@@ -84,6 +84,7 @@ nav ul li a:hover::after{
 .about-col-1{
 flex-basis: 35%;
 margin-top: 10px;
+object-fit: contain;
 }
 .about-col-1 img{
     width: 100%;
@@ -180,6 +181,7 @@ margin-top: 10px;
 .services-list div:hover{
     background-color: #ff004f;
     transform: translateY(-10px);
+    transition: .5s;
 }
 /* -----------------------portfolio----------------------------- */
 #portfolio{
@@ -381,6 +383,7 @@ form .btn2 {
     }
     .about-col-1{
         margin-bottom: 30px;
+        
     }
     .about-col-2{
         font-size: 20px;
@@ -394,6 +397,9 @@ form .btn2 {
     }
     .copright{
         font-size: 14px;
+    }
+    #headerimg.jpg{
+        flex-basis: 100%;
     }
 }
 #msg{
